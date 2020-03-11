@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <script>
+        function onload() {
+            var light = 1;
+            var music = 1;
+
+            localStorage.setItem("mSwitch", music);
+            localStorage.setItem("lSwitch", light);
+        }
+    </script>
+    <script>
+        function mFunction() {
+
+            var music = localStorage.getItem("mSwitch");
+            var button = document.getElementById("Music").value;
+            var final = 0;
+            final = music * button;
+            localStorage.setItem("mSwitch", final);
+
+        }
+    </script>
+    <script>
+        function LFunction() {
+
+            var light = localStorage.getItem("lSwitch");
+            var button = document.getElementById("Lights").value;
+            var final = 0;
+            final = light * button;
+            localStorage.setItem("lSwitch", final);
+
+
+        }
+    </script>
+
+    <script>
+        function musicIndicator() {
+
+            var trigswitch = localStorage.getItem("mSwitch");
+
+            if (
+                trigswitch < 0) {
+
+                document.getElementById("Mindicator").style.display = 'block'
+            } else {
+                var x = document.getElementById("Mindicator");
+
+                x.style.display = 'none';
+            }
+
+
+        }
+    </script>
+
+    <script>
+        function lightIndicator() {
+
+            var trigswitch = localStorage.getItem("lSwitch");
+
+            if (
+                trigswitch < 0) {
+                document.getElementById("Lindicator").style.display = 'block'
+
+            } else {
+                var x = document.getElementById("Lindicator");
+
+                x.style.display = 'none';
+
+            }
+        }
+    </script>
+
+
+    <style type="text/css" scoped>
+        .row {
+            float: left;
+            width: 100%;
+            text-align: center;
+        }
+
+        .column {
+
+            display: inline-block;
+
+        }
+
+        .Lindicator {
+            display: none;
+            position: absolute;
+            top=0;
+            margin-left: 17%;
+            margin-top: -30%
+        }
+
+        .Mindicator {
+            display: none;
+            position: absolute;
+            top=0;
+            left=0;
+            margin-top: -30%
+        }
+
+        .labelL {
+            position: absolute;
+            top: 47%;
+            left: 65%;
+            font-size: 50px;
+            font-family: "Verdana", Verdana, sans-serif;
+
+        }
+
+        .labelM {
+            position: absolute;
+            top: 47%;
+            left: 26%;
+            font-size: 50px;
+            font-family: "Verdana", Verdana, sans-serif;
+
+        }
+    </style>
+
+</head>
+
+<body onload="onload()">
+    <font color="#FFFAF0">
+        <h1>Eyetracking Site</h1>
+    </font>
+    <div>
+        <style type="text/css" scoped>
+            body {
+                background-color: #454444
+            }
+        </style>
+
+        <div class="row">
+
+            <div class="column">
+                <input type="image" class="input1" onclick="mFunction(); musicIndicator()" value='-1' id="Music" alt="Music" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Red_Circle%28small%29.svg/1024px-Red_Circle%28small%29.svg.png" width="600" height="600">
+                <div class="labelM">Music</div>
+                <div id="Mindicator" class="Mindicator"><img id="indicatorM" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Green_Light_Icon.svg/1024px-Green_Light_Icon.svg.png" width="5%" height="5%" /></div>
+            </div>
+
+            <div class="column">
+                <input type="image" class="input2" onclick="LFunction(); lightIndicator()" value='-1' id="Lights" alt="Lights" src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/Yellow_icon.svg/1200px-Yellow_icon.svg.png" width="600" height="600">
+                <div class="labelL">Lights</div>
+                <div id="Lindicator" class="Lindicator"><img id="indicatorL" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Green_Light_Icon.svg/1024px-Green_Light_Icon.svg.png" width="10%" height="10%" /></div>
+
+            </div>
+        </div>
+    </div>
+
+</body></html>
