@@ -92,7 +92,7 @@
             display: none;
             position: absolute;
             top=0;
-            margin-left: 17%;
+            margin-left: 15%;
             margin-top: -30%
         }
 
@@ -100,24 +100,24 @@
             display: none;
             position: absolute;
             top=0;
-            left=0;
+            margin-left: 9%;
             margin-top: -30%
         }
 
         .labelL {
             position: absolute;
-            top: 47%;
-            left: 65%;
-            font-size: 50px;
+            top: 130%;
+            left: 46%;
+            font-size: 300%;
             font-family: "Verdana", Verdana, sans-serif;
 
         }
 
         .labelM {
             position: absolute;
-            top: 47%;
-            left: 26%;
-            font-size: 50px;
+            top: 45%;
+            left: 46%;
+            font-size: 300%;
             font-family: "Verdana", Verdana, sans-serif;
 
         }
@@ -127,7 +127,7 @@
 
 <body onload="onload()">
     <font color="#FFFAF0">
-        <h1>Eyetracking Site</h1>
+        <h1>OculEye</h1>
     </font>
     <div>
         <style type="text/css" scoped>
@@ -139,15 +139,15 @@
         <div class="row">
 
             <div class="column">
-                <input type="image" class="input1" onclick="mFunction(); musicIndicator()" value='-1' id="Music" alt="Music" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Red_Circle%28small%29.svg/1024px-Red_Circle%28small%29.svg.png" width="600" height="600">
+                <input type="image" class="input1" onclick="mFunction(); musicIndicator()" value='-1' id="Music" alt="Music" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Red_Circle%28small%29.svg/1024px-Red_Circle%28small%29.svg.png" width="60%" height="60%">
                 <div class="labelM">Music</div>
                 <div id="Mindicator" class="Mindicator"><img id="indicatorM" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Green_Light_Icon.svg/1024px-Green_Light_Icon.svg.png" width="5%" height="5%" /></div>
             </div>
 
             <div class="column">
-                <input type="image" class="input2" onclick="LFunction(); lightIndicator()" value='-1' id="Lights" alt="Lights" src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/Yellow_icon.svg/1200px-Yellow_icon.svg.png" width="600" height="600">
+                <input type="image" class="input2" onclick="LFunction(); lightIndicator()" value='-1' id="Lights" alt="Lights" src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/Yellow_icon.svg/1200px-Yellow_icon.svg.png" width="52%" height="52%">
                 <div class="labelL">Lights</div>
-                <div id="Lindicator" class="Lindicator"><img id="indicatorL" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Green_Light_Icon.svg/1024px-Green_Light_Icon.svg.png" width="10%" height="10%" /></div>
+                <div id="Lindicator" class="Lindicator"><img id="indicatorL" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Green_Light_Icon.svg/1024px-Green_Light_Icon.svg.png" width="5%" height="5%" /></div>
 
             </div>
         </div>
